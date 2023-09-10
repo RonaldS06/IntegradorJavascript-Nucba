@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integrador Js</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/mediaqueries.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="container_nav">
+          <div class="container_menuLogo">
+            <div class="logo">
+              <a href="/index.html"
+                ><img src="../assets/img/logo.png" alt="Logo de Tienda"
+              /></a>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="iconNav">
+            <div class="icon-menu">
+              <a href="pages/login.html">
+                <img
+                  src="assets/img/icon-perfil.svg"
+                  alt="Perfil de usuario"
+                  class="icon-adaptable"
+                />
+              </a>
+            </div>
+            <div class="icon-menu">
+              <img
+                src="assets/img/icon-cart.svg"
+                alt="Carrito de compra"
+                class="icon-adaptable"
+              />
+            </div>
+            <div class="icon-menu">
+              <img
+                src="assets/img/icon-main.svg"
+                alt="Menu hamburguesa"
+                class="menuHamburguesa"
+              />
+            </div>
+          </div>
+        </section>
+      </nav>
+
+      <section class="cabecera" id="inicio">
+        <h1>FASHION</h1>
+        <div class="img-texto">
+          <img
+            src="assets/img/imgFashion.png"
+            width=""
+            height=""
+            alt=""
+            title=""
+          />
+
+          <img
+            src="assets/img/code-barraLG.svg"
+            alt="Codigo de barra detalle"
+            class="code-barra"
+          />
+          <div class="texto-img">
+            <h2>+10k</h2>
+            <p>COLECCIONES</p>
+          </div>
+        </div>
+
+        <img
+          src="assets/img/headerLG.png"
+          alt="img portada"
+          class="img-portada"
+          draggable="false"
+        />
+      </section>
+      <img
+        src="assets/img/code-barraLG.svg"
+        alt="Codigo de barra detalle"
+        class="code-barraLG"
+      />
+    </header>
+
+    <main>
+      <section class="container-animation">
+        <div class="texto-barra">
+          <h2>STYLE FASHION</h2>
+          <img src="assets/img/estrella.svg" alt="Detalle de estrella" />
+          <h2>STYLE FASHION</h2>
+          <img src="assets/img/estrella.svg" alt="Detalle de estrella" />
+          <h2>STYLE FASHION</h2>
+        </div>
+      </section>
+
+      <section class="container-nosotros" id="nosotros">
+        <h3>NOSOTROS</h3>
+        <p>
+          Somos <span class="texto_resaltado">ronShop</span> una marca dedicada
+          a la moda contemporánea y a la expresión personal a través de la ropa.
+          Nuestra pasión por la moda se refleja en cada prenda que creamos,
+          fusionando estilo, comodidad y calidad.
+        </p>
+        <figure>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/img/aboutLG.jpg"
+              width=""
+              height=""
+            />
+            <img
+              src="assets/img/about.jpg"
+              width=""
+              height=""
+              alt=""
+              title=""
+            />
+          </picture>
+        </figure>
+      </section>
+
+      <section id="productos">
+        <div class="container___collection">
+          <div class="collection__title">
+            <h2>COLLECCIÓN</h2>
+            <h3>NUESTRA COLECCIÓN PARA TI</h3>
+          </div>
+          <div class="collection__categories">
+            <button class="category active">TODOS</button>
+            <button class="category">REMERA</button>
+            <button class="category">PANTALÓN</button>
+            <button class="category">SHORT</button>
+            <button class="category">LENTES</button>
+          </div>
+
+          <div class="container__products">
+            <!-- Producto 1 -->
+            <div class="card_product">
+              <img
+                src="assets/img/remera-oversize.jpg"
+                alt="producto de la colección"
+                width="360"
+              />
+              <div class="info_product">
+                <h3>Camiseta Heavy W.</h3>
+                <div class="precio-btnAdd">
+                  <span>$399</span>
+                  <button class="btn-add">Agregar</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="card_product">
+              <img
+                src="assets/img/lentes-1.jpg"
+                alt="producto de la colección"
+                width="360"
+              />
+              <div class="info_product">
+                <h3>Anteojos Madison</h3>
+                <div class="precio-btnAdd">
+                  <span>$399</span>
+                  <button class="btn-add">Agregar</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card_product">
+              <img
+                src="assets/img/pantalon-1.jpg"
+                alt="producto de la colección"
+                width="360"
+              />
+              <div class="info_product">
+                <h3>Jean Aperol</h3>
+                <div class="precio-btnAdd">
+                  <span>$399</span>
+                  <button class="btn-add">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-more">VER TODOS</button>
+        </div>
+      </section>
+
+      <section class="container___phrase">
+        <h2>ESTILO QUE INSPIRA CONFIANZA</h2>
+        <p>
+          En <span class="texto_resaltado">ronShop</span>, nuestro compromiso es
+          ofrecerte estilo que no solo resalta tu belleza exterior, sino que
+          también fortalece tu confianza interior.
+        </p>
+        <img
+          src="assets/img/img-phrase.png"
+          width=""
+          height=""
+          alt=""
+          title=""
+        />
+      </section>
+    </main>
+
+    <footer>
+      <section class="subscription">
+        <h2>SUBSCRIBETE PARA NUEVOS LANZAMIENTOS</h2>
+
+        <form action="#">
+          <div class="inbox">
+            <input type="email" name="email" placeholder="TU CORREO" />
+            <a href="#" class="btn-sub">SUBSCRIBETE</a>
+          </div>
+        </form>
+      </section>
+
+      <div class="lista_footer" id="contacto">
+        <ul>
+          <li><a>CATEGORIAS</a></li>
+          <li><a href="#">REMERA</a></li>
+          <li><a href="#">PANTALÓN</a></li>
+          <li><a href="#">BUZOS</a></li>
+          <li><a href="#">SHORT</a></li>
+          <li><a href="#">LENTES</a></li>
+        </ul>
+
+        <ul>
+          <li><a>GÉNERO</a></li>
+          <li><a href="#">HOMBRE</a></li>
+          <li><a href="#">MUJER</a></li>
+          <li><a href="#">UNISEX</a></li>
+        </ul>
+
+        <ul>
+          <li><a>TIENDA</a></li>
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">NOSOTROS</a></li>
+          <li><a href="#">PRODUCTOS</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

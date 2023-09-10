@@ -1,0 +1,578 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700&family=MuseoModerno:wght@200;300;400;500;600;700;900&display=swap");
+
+:root {
+  /* bg colors */
+  --background: #d3d3d3;
+  --primary: #323f2e;
+  --secondary: #e65039;
+
+  /* Text colors */
+  --grayLight: #757575;
+  --grayNormal: #cccccc;
+  --grayBold: #48473e;
+
+  /* Decoration */
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "MuseoModerno", cursive;
+}
+
+body {
+  background-color: var(--background);
+}
+
+/* Logo y menu */
+nav .container_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  line-height: 50%;
+}
+
+.container_menuLogo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.container_menuLogo .menu {
+  background-color: white;
+  padding: 18px 29px;
+  border-radius: 40px;
+
+  display: none;
+}
+.logo a img {
+  width: 12rem;
+}
+.menu ul {
+  display: flex;
+  gap: 20px;
+}
+.menu ul li a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Iconos Menu Tamaño */
+.iconNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon-menu {
+  line-height: 50%;
+}
+.iconNav .icon-adaptable {
+  width: 35px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.menuHamburguesa {
+  background-color: var(--primary);
+  padding: 10px 13px;
+  border-radius: 25px;
+}
+
+.cabecera {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 15px;
+
+  position: relative;
+  padding: 4rem 0 15rem;
+}
+
+.cabecera h1 {
+  font-size: 19vw;
+  color: var(--primary);
+  font-weight: 900;
+}
+.code-barra {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40vw;
+}
+.cabecera .img-texto {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+.cabecera .texto-img {
+  color: var(--primary);
+}
+.cabecera .img-texto img:first-child {
+  width: 55vw;
+}
+.texto-img h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+.texto-img h2 + p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cabecera {
+  overflow: hidden;
+}
+.cabecera .img-portada {
+  position: absolute;
+  bottom: 0;
+  width: 138vw;
+}
+.code-barraLG {
+  display: none;
+}
+
+/* -----Main----- */
+
+/* animacion texto barra */
+.container-animation {
+  overflow-x: hidden;
+  background-color: var(--primary);
+}
+
+.texto-barra {
+  color: white;
+  white-space: nowrap;
+  display: inline-flex;
+  gap: 1rem;
+  animation: scrollHorizontal 10s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.texto-barra h2 {
+  font-size: 36px;
+  display: inline;
+}
+
+.texto-barra img {
+  width: 40px;
+}
+
+/*SOBRE NOSOTROS*/
+.container-nosotros {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+main .container-nosotros h3 {
+  color: #323f2e;
+  font-size: 44px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main .container-nosotros h3::after {
+  content: "NOSOTROS";
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--primary);
+  margin-top: -75px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+main .container-nosotros p {
+  color: black;
+  font-family: MuseoModerno;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  text-align: center;
+}
+main .container-nosotros figure picture img {
+  width: 85vw;
+  text-align: center;
+  margin: 0 auto;
+  display: inherit;
+  border-radius: 30px;
+}
+.texto_resaltado {
+  font-weight: 700;
+}
+
+/* Collection */
+.container___collection {
+  background-color: var(--primary);
+  border-radius: 2.1875rem;
+  padding: 3rem 1rem;
+}
+.container___collection > .collection__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--grayNormal);
+}
+.container___collection > .collection__title h2 {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.container___collection > .collection__title h2::after {
+  content: ".COLECCIÓN";
+  font-size: 24px;
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--grayNormal);
+  position: absolute;
+  margin: -8px 0;
+  opacity: 0.5;
+}
+.container___collection > .collection__title h2 + h3 {
+  font-size: 7vw;
+}
+
+.collection__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin: 2rem 0;
+}
+
+.collection__categories button.category {
+  background-color: transparent;
+  padding: 13px 36px;
+  border: 1.5px solid #cccccc;
+  border-radius: 35px;
+
+  font-family: archivo;
+  color: var(--grayNormal);
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Desktop */
+.collection__categories button.category:hover {
+  background-color: var(--secondary);
+  border: 1px solid transparent;
+}
+.collection__categories button.category.active {
+  background-color: var(--secondary);
+  border: none;
+}
+
+.container__products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  /* align-items: center; */
+}
+
+/* card product */
+.card_product img {
+  border-radius: 20px;
+  width: 100%;
+}
+.card_product .info_product {
+  color: var(--grayNormal);
+  font-size: 32px;
+}
+.card_product .info_product > .precio-btnAdd .btn-add {
+  background-color: var(--secondary);
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: none;
+  color: var(--background);
+  font-size: 17px;
+}
+.precio-btnAdd {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-more {
+  padding: 17px 37px;
+  border-radius: 39px;
+  border: none;
+  font-family: archivo;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: 80px auto 0;
+  display: inherit;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  background: var(--secondary);
+  color: var(--grayNormal);
+}
+
+/* Contenedor Frase Tienda */
+
+.container___phrase {
+  margin-top: 3rem;
+  overflow: hidden;
+  padding: 4rem 1rem 0;
+  background-color: var(--primary);
+  border-radius: 2.1875rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container___phrase h2 {
+  color: var(--grayNormal);
+  font-size: 25px;
+}
+.container___phrase p {
+  color: var(--grayNormal);
+  font-size: 1rem;
+  font-family: archivo;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.container___phrase img {
+  width: 100vw;
+}
+
+/* -------FOOTER-------- */
+footer {
+  margin-top: 2.5rem;
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+footer .subscription {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+footer .subscription h2 {
+  color: var(--grayBold);
+  font-family: archivo;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer form {
+  padding: 0 1rem;
+}
+footer form .inbox {
+  background-color: transparent;
+  border: 1.5px solid gray;
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+footer form .inbox input {
+  background-color: transparent;
+  border: none;
+  width: 25vw;
+
+  font-family: archivo;
+  font-weight: normal;
+}
+footer form .inbox input + .btn-sub {
+  background-color: var(--secondary);
+  max-width: 300px;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: white;
+  font-family: archivo;
+  font-weight: 200;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.inbox input[type="email"] {
+  border-radius: 30px;
+  border: none;
+}
+
+.lista_footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  gap: 6vw;
+}
+
+.lista_footer ul li a {
+  color: var(--grayLight);
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: archivo;
+}
+.lista_footer ul li:first-child a {
+  color: var(--grayBold);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* ------FORM LOGIN------- */
+.logo-info {
+  text-align: center;
+  padding: 0 1rem;
+}
+.logo-info h2 {
+  line-height: 25px;
+  margin: 2rem 0;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.form__container .form__field input {
+  font-family: archivo;
+  border: none;
+  border-bottom: 1.5px solid var(--grayNormal);
+  padding: 5px 0;
+}
+.form__container input::placeholder {
+  color: var(--grayNormal);
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form__field label {
+  font-family: archivo;
+  font-weight: 600;
+}
+
+.orGoogle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--grayBold);
+}
+
+.form__submit__btn {
+  background-color: var(--primary);
+  border-radius: 36px;
+  color: white;
+  font-family: archivo;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.form__submit__btn:hover {
+  box-shadow: 0px 5px 02px rgba(0, 0, 0, 0.208);
+}
+#login-google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: none;
+  padding: 6px 0;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+#login-google-button span {
+  font-size: 14px;
+  font-family: archivo;
+  font-weight: 500;
+}
+.form--redirect {
+  text-align: center;
+  font-family: archivo;
+  font-size: 14px;
+  font-weight: 500;
+}
+.form--redirect a {
+  font-family: archivo;
+  color: #1976d2;
+  transition: all 0.3s;
+}
+.form--redirect a:hover {
+  font-family: archivo;
+  color: #0033ff;
+}
+.container-generalForm {
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.container-image {
+  display: none;
+  background-color: var(--primary);
+  border-radius: 50px;
+  padding: 5rem 1rem;
+}
+
+.container-image img {
+  width: 40vw;
+}
+
+.section-login {
+  animation: containerForm 0.5s ease-in-out;
+}
+
+@keyframes containerForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

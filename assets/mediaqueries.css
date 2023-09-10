@@ -1,0 +1,345 @@
+/* ----Para celulares LG---- */
+@media (min-width: 576px) {
+  .cabecera .img-texto img:first-child {
+    width: 43vw;
+  }
+  .cabecera .img-portada {
+    width: 100vw;
+  }
+  @keyframes scrollHorizontal {
+    0% {
+      transform: translateX(63%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .container___collection > .collection__title h2 + h3 {
+    font-size: 44px;
+    line-height: 47px;
+  }
+  .collection__categories {
+    margin: 3rem 1rem;
+  }
+
+  /* footer */
+  footer {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 4rem 0 0;
+  }
+  footer .subscription {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .lista_footer {
+    gap: 5rem;
+  }
+}
+/* Para tablets*/
+@media (min-width: 768px) {
+  .texto-img h2 {
+    font-size: 79px;
+  }
+  .texto-img h2 + p {
+    font-size: 24px;
+  }
+
+  .cabecera .img-texto {
+    position: initial;
+  }
+
+  .code-barra {
+    top: 71px;
+    width: 26vw;
+  }
+  .cabecera .img-texto figure picture img {
+    width: 45vw;
+  }
+
+  /* COLECCION */
+  .container___collection > .collection__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container___collection > .collection__title h2 {
+    font-size: 37px;
+  }
+  .container___collection > .collection__title h2::after {
+    font-size: 37px;
+  }
+
+  .card_product img {
+    width: 305px;
+  }
+  .card_product .info_product {
+    color: var(--grayNormal);
+    font-size: 19px;
+  }
+  .card_product {
+    display: flex;
+    flex-direction: column;
+  }
+  .container___phrase img {
+    width: 40vw;
+  }
+
+  /* Frase Tienda */
+  .container___phrase {
+    flex-direction: row;
+    padding: 1rem 0 0rem 2rem;
+  }
+  .container___phrase h2 {
+    line-height: 28px;
+  }
+  .container___phrase p {
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
+/* Para desktop SM */
+@media (min-width: 992px) {
+  /* NAVBAR */
+  .menuHamburguesa {
+    display: none;
+  }
+  nav .container_nav {
+    padding: 15px 5rem;
+  }
+  .cabecera h1 {
+    font-size: 18vw;
+  }
+  .container_menuLogo .menu {
+    background-color: white;
+    padding: 18px 29px;
+    border-radius: 40px;
+
+    display: block;
+  }
+
+  .menu ul li a {
+    transition: all 0.3s ease-in-out;
+  }
+  .menu ul li a:hover {
+    color: var(--secondary);
+  }
+
+  .iconNav .icon-adaptable:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+
+  /* HEADER */
+  .cabecera {
+    padding: 4rem 0 16rem;
+  }
+  .cabecera .img-texto {
+    right: 5rem;
+    top: 48%;
+    gap: 0;
+    line-height: 53px;
+  }
+  .texto-img h2 {
+    font-size: 79px;
+    margin: 1rem 0 0;
+  }
+  .cabecera .img-texto img:first-child {
+    width: 15vw;
+  }
+
+  .code-barra {
+    display: none;
+  }
+  .code-barraLG {
+    display: block;
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    width: 24%;
+  }
+
+  .img-texto {
+    position: absolute !important;
+  }
+  .cabecera .img-texto figure picture img {
+    width: 21vw;
+  }
+  .cabecera .img-portada {
+    width: 69vw;
+    left: 8%;
+  }
+
+  .cabecera .img-texto {
+    flex-direction: column;
+  }
+
+  /* ANIMATION */
+
+  .texto-barra h2 {
+    font-size: 48px;
+    display: inline;
+  }
+
+  @keyframes scrollHorizontal {
+    0% {
+      transform: translateX(125%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* NOSOTROS */
+  .container-nosotros {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  main .container-nosotros figure picture img {
+    width: 100%;
+  }
+  main .container-nosotros p {
+    padding: 0 1rem 1rem;
+  }
+  /* COLECCIÓN */
+  .container___collection {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .collection__categories {
+    justify-content: center;
+  }
+  .card_product .info_product > .precio-btnAdd .btn-add {
+    transition: all 0.3s ease-in-out;
+  }
+  .card_product .info_product > .precio-btnAdd .btn-add:hover {
+    cursor: pointer;
+    background: white;
+    color: var(--primary);
+  }
+  .btn-more:hover {
+    color: var(--primary);
+    background-color: white;
+  }
+  footer form .inbox input + .btn-sub:hover {
+    color: var(--primary);
+    background-color: white;
+    font-weight: 600;
+  }
+
+  /* FRASE */
+  .container___phrase {
+    max-width: 1080px;
+    margin: 3rem auto;
+  }
+
+  /* FOOTER */
+  .lista_footer {
+    gap: 4rem;
+  }
+  footer {
+    max-width: 1080px;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+  footer .subscription {
+    order: 3;
+  }
+  footer form .inbox {
+    max-width: 376px;
+  }
+  footer .subscription h2 {
+    text-align: start;
+    width: 370px;
+  }
+
+  .lista_footer ul li a:hover {
+    color: var(--grayBold);
+  }
+
+  .container-image {
+    display: block;
+  }
+  .container-generalForm {
+    justify-content: space-around;
+  }
+  section.section-login {
+    width: 470px;
+  }
+  #login-google-button{
+    transition: all .3s ease-in-out;
+  }
+  #login-google-button:hover{
+    background-color: var(--grayNormal);
+  }
+}
+/* Para desktop LG */
+@media (min-width: 1200px) {
+  .cabecera .img-texto img:first-child {
+    width: 13vw;
+  }
+  .cabecera .img-texto {
+    right: 8rem;
+    top: 53%;
+    gap: 0;
+    line-height: 53px;
+  }
+  .container-nosotros,
+  .container___collection,
+  .container___phrase,
+  footer {
+    max-width: 1140px;
+  }
+  .container-image img {
+    width: 35vw;
+  }
+}
+
+/* Para desktop XL */
+@media (min-width: 1400px) {
+  nav .container_nav {
+    padding: 15px 0;
+  }
+  nav .container_nav {
+    justify-content: space-around;
+  }
+  .cabecera h1 {
+    font-size: 17rem;
+  }
+  .cabecera {
+    padding: 4rem 0 28rem;
+  }
+  .cabecera .img-portada {
+    width: 68rem;
+    left: initial;
+  }
+  .cabecera .img-texto {
+    right: 8rem;
+    top: 56%;
+    gap: 0;
+    line-height: 33px;
+  }
+  .cabecera .img-texto img:first-child {
+    width: 14rem;
+  }
+  .texto-img h2 {
+    font-size: 50px;
+    margin: 1rem 0 0;
+  }
+  .code-barraLG {
+    width: 17%;
+  }
+
+  .container-nosotros,
+  .container___collection,
+  .container___phrase,
+  footer {
+    max-width: 1320px;
+  }
+}
