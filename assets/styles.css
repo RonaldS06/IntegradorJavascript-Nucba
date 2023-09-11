@@ -535,6 +535,17 @@ footer form .inbox input + .btn-sub {
   font-size: 14px;
   font-weight: 500;
 }
+.footer__text {
+  text-align: center;
+}
+.text--gradient {
+  background: linear-gradient(135deg, #323f2e 0%, #e65039 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600;
+}
+
 .form--redirect a {
   font-family: archivo;
   color: #1976d2;
