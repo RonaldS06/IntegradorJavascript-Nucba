@@ -37,7 +37,7 @@ nav .container_nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 25px;
+  padding: 15px 3.6vw;
 
   position: fixed;
   z-index: 999;
@@ -53,21 +53,30 @@ nav .container_nav {
 
 .container_menuLogo .menu {
   background-color: white;
-  padding: 18px 29px;
-  border-radius: 40px;
+  padding: 2rem;
+  border-radius: 30px 0;
+
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  height: fit-content;
+  width: 50%;
 
   display: none;
 }
-.logo a img {
-  width: 12rem;
-}
 .menu ul {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 .menu ul li a {
   color: var(--primary);
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+.logo a img {
+  width: 10rem;
 }
 
 /* Iconos Menu Tamaño */
@@ -115,6 +124,18 @@ nav .container_nav {
   top: 0;
   left: 50%;
   width: 40vw;
+  animation: fadeTopBottom 1s ease-in-out;
+}
+
+@keyframes fadeTopBottom {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 .cabecera .img-texto {
   position: relative;
@@ -128,6 +149,16 @@ nav .container_nav {
 }
 .cabecera .img-texto img:first-child {
   width: 55vw;
+}
+@keyframes fadeRigth {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 .texto-img h2 {
   font-size: 40px;
@@ -145,7 +176,19 @@ nav .container_nav {
   position: absolute;
   bottom: 0;
   width: 138vw;
+  animation: fadeLeft 1s ease-in-out;
 }
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .code-barraLG {
   display: none;
 }
@@ -557,7 +600,6 @@ footer form .inbox input + .btn-sub {
 }
 .container-generalForm {
   display: flex;
-  direction: row;
   justify-content: center;
   align-items: center;
   height: 100vh;

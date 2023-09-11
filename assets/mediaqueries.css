@@ -6,6 +6,9 @@
   .cabecera .img-portada {
     width: 100vw;
   }
+  .logo a img {
+    width: 12rem;
+  }
   @keyframes scrollHorizontal {
     0% {
       transform: translateX(63%);
@@ -118,10 +121,21 @@
     border-radius: 40px;
 
     display: block;
+    position: initial;
+    height: initial;
+    width: 100%;
   }
 
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
   .menu ul li a {
+    color: var(--primary);
+    font-weight: 600;
     transition: all 0.3s ease-in-out;
+    font-size: 1rem;
   }
   .menu ul li a:hover {
     color: var(--secondary);
@@ -149,6 +163,7 @@
   }
   .cabecera .img-texto img:first-child {
     width: 15vw;
+    animation: fadeRigth 1s ease-in-out;
   }
 
   .code-barra {
@@ -160,6 +175,7 @@
     top: 96px;
     left: 50%;
     width: 24%;
+    animation: fadeTopBottom 1.3s ease-in-out;
   }
 
   .img-texto {
@@ -203,7 +219,7 @@
     width: 100%;
   }
   main .container-nosotros p {
-    padding: 0 1rem 1rem;
+    padding: 0 19rem 1rem;
   }
   /* COLECCIÓN */
   .container___collection {
@@ -272,10 +288,10 @@
   section.section-login {
     width: 470px;
   }
-  #login-google-button{
-    transition: all .3s ease-in-out;
+  #login-google-button {
+    transition: all 0.3s ease-in-out;
   }
-  #login-google-button:hover{
+  #login-google-button:hover {
     background-color: var(--grayNormal);
   }
 }
@@ -336,6 +352,14 @@
     width: 17%;
   }
 
+  @keyframes scrollHorizontal {
+    0% {
+      transform: translateX(150%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
   .container-nosotros,
   .container___collection,
   .container___phrase,

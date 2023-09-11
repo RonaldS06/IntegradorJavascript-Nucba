@@ -1,127 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="../assets/styles.css" />
-    <link rel="stylesheet" href="../assets/mediaqueries.css" />
-  </head>
 
-  <body>
-    <main>
-      <div class="container-generalForm">
-        <section class="section-login">
-          <div class="container-login">
-            <div class="logo-info">
-              <a href="/index.html"
-                ><img src="../assets/img/logo.png" alt="Logo de Tienda"
-              /></a>
-              <h2>Crea tu cuenta</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrarse | ronShop</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/mediaqueries.css" />
+</head>
+
+<body>
+  <main>
+    <div class="container-generalForm">
+      <section class="section-login">
+        <div class="container-login">
+          <div class="logo-info">
+            <a href="/index.html"><img src="../assets/img/logo.png" alt="Logo de Tienda" /></a>
+            <h2>Crea tu cuenta</h2>
+          </div>
+          <form class="form__container" id="register-form" novalidate>
+            <!-- Nombre -->
+            <div class="form__field">
+              <label for="nombre">Nombre</label>
+              <input type="text" placeholder="Ingresa tu nombre" class="form__input" id="name" autocomplete="off"
+                name="nombre" />
+              <small></small>
             </div>
-            <form class="form__container" id="register-form" novalidate>
-              <!-- Nombre -->
-              <div class="form__field">
-                <label for="nombre">Nombre</label>
-                <input
-                  type="text"
-                  placeholder="Ingresa tu nombre"
-                  class="form__input"
-                  id="name"
-                  autocomplete="off"
-                  name="nombre"
-                />
-                <small></small>
-              </div>
-              <!-- Nombre -->
-              <!-- Apellido -->
-              <div class="form__field">
-                <label for="apellido">Apellido</label>
-                <input
-                  type="text"
-                  placeholder="Ingresa tu apellido"
-                  class="form__input"
-                  id="lastName"
-                  autocomplete="off"
-                  name="apellido"
-                />
-                <small></small>
-              </div>
-              <!-- Apellido -->
-              <!-- Correo -->
-              <div class="form__field">
-                <label for="correo">Correo</label>
-                <input
-                  type="email"
-                  placeholder="Ingresa tu correo"
-                  class="form__input"
-                  id="email"
-                  autocomplete="off"
-                  name="correo"
-                />
-                <small></small>
-              </div>
-              <!-- Correo -->
+            <!-- Nombre -->
+            <!-- Apellido -->
+            <div class="form__field">
+              <label for="apellido">Apellido</label>
+              <input type="text" placeholder="Ingresa tu apellido" class="form__input" id="lastName" autocomplete="off"
+                name="apellido" />
+              <small></small>
+            </div>
+            <!-- Apellido -->
+            <!-- Correo -->
+            <div class="form__field">
+              <label for="correo">Correo</label>
+              <input type="email" placeholder="Ingresa tu correo" class="form__input" id="email" autocomplete="off"
+                name="correo" />
+              <small></small>
+            </div>
+            <!-- Correo -->
 
-              <!-- Contraseña -->
-              <div class="form__field">
-                <label for="contraseña">Contraseña</label>
-                <input
-                  type="password"
-                  placeholder="Ingresa tu contraseña"
-                  class="form__input"
-                  id="password"
-                  autocomplete="off"
-                  name="contraseña"
-                />
-                <small></small>
-              </div>
-              <!-- Contraseña -->
-              <!-- Teléfono -->
-              <div class="form__field">
-                <label for="telefono">Teléfono</label>
-                <input
-                  type="text"
-                  placeholder="Ingresa tu teléfono"
-                  class="form__input"
-                  id="phone"
-                  autocomplete="off"
-                  name="telefono"
-                />
-                <small></small>
-              </div>
-              <!-- Teléfono -->
+            <!-- Contraseña -->
+            <div class="form__field">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" placeholder="Ingresa tu contraseña" class="form__input" id="password"
+                autocomplete="off" name="contraseña" />
+              <small></small>
+            </div>
+            <!-- Contraseña -->
+            <!-- Teléfono -->
+            <div class="form__field">
+              <label for="telefono">Teléfono</label>
+              <input type="text" placeholder="Ingresa tu teléfono" class="form__input" id="phone" autocomplete="off"
+                name="telefono" />
+              <small></small>
+            </div>
+            <!-- Teléfono -->
 
-              <input
-                type="submit"
-                class="form__submit__btn"
-                value="Registrarse"
-              />
-              <span class="orGoogle">O</span>
-              <button type="button" id="login-google-button">
-                <img
-                  src="../assets/img/icon-google.svg"
-                  alt="icono de google"
-                />
-                <span>Continuar con Google</span>
-              </button>
+            <input type="submit" class="form__submit__btn" value="Registrarse" />
+            <span class="orGoogle">O</span>
+            <button type="button" id="login-google-button">
+              <img src="../assets/img/icon-google.svg" alt="icono de google" />
+              <span>Continuar con Google</span>
+            </button>
 
-              <p class="form--redirect">
-                ¿Ya tenés cuenta?
-                <a class="link--gradient" href="./login.html">Iniciá Sesión</a>
-              </p>
-              <p class="footer__text">
-                Hecho con ❤️ por <a href="https://www.linkedin.com/in/ronald-santamar%C3%ADa-pizarro-9b538221a/" class="text--gradient">Ronald Santamaria</a>
-              </p>
-            </form>
-          </div>
-        </section>
-        <section class="banner-image">
-          <div class="container-image">
-            <img src="../assets/img/img-form.svg" alt="Imagen del formulario" />
-          </div>
-        </section>
-      </div>
-    </main>
-  </body>
+            <p class="form--redirect">
+              ¿Ya tenés cuenta?
+              <a class="link--gradient" href="./login.html">Iniciá Sesión</a>
+            </p>
+            <p class="footer__text">
+              Hecho con ❤️ por
+              <a href="https://www.linkedin.com/in/ronald-santamar%C3%ADa-pizarro-9b538221a/" class="text--gradient"
+                target="_blank">Ronald Santamaria</a>
+            </p>
+          </form>
+        </div>
+      </section>
+      <section class="banner-image">
+        <div class="container-image">
+          <img src="../assets/img/img-form.svg" alt="Imagen del formulario" />
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
 </html>
