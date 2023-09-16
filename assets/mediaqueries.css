@@ -1,5 +1,19 @@
 /* ----Para celulares LG---- */
 @media (min-width: 576px) {
+  /* Carrito */
+  .cart {
+    width: 25rem;
+    right: 0;
+  }
+  .item-quantity {
+    padding: 0 10px;
+  }
+  .item-handler {
+    border: 1px solid black;
+    padding: 3px 16px;
+    border-radius: 20px;
+  }
+
   .cabecera .img-texto img:first-child {
     width: 43vw;
   }
@@ -43,6 +57,14 @@
 }
 /* Para tablets*/
 @media (min-width: 768px) {
+  /* CARRITO */
+  .cart {
+    min-width: 375px;
+    right: 0;
+  }
+  .cart .container_cart {
+    padding: 2rem 0;
+  }
   .texto-img h2 {
     font-size: 79px;
   }
@@ -255,7 +277,7 @@
 
   /* FOOTER */
   .lista_footer {
-    gap: 4rem;
+    gap: 3rem;
   }
   footer {
     max-width: 1080px;
@@ -264,13 +286,13 @@
     justify-content: space-between;
     padding: 0 3rem;
   }
-  footer .subscription {
+  footer .suscription {
     order: 3;
   }
   footer form .inbox {
     max-width: 376px;
   }
-  footer .subscription h2 {
+  footer .suscription h2 {
     text-align: start;
     width: 370px;
   }
@@ -294,6 +316,7 @@
   #login-google-button:hover {
     background-color: var(--grayNormal);
   }
+
 }
 /* Para desktop LG */
 @media (min-width: 1200px) {

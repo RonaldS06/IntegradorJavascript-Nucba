@@ -26,6 +26,7 @@ html {
   text-decoration: none;
   list-style-type: none;
   font-family: "MuseoModerno", cursive;
+
 }
 
 body {
@@ -49,6 +50,7 @@ nav .container_nav {
   display: flex;
   align-items: center;
   gap: 18px;
+  user-select: none
 }
 
 .container_menuLogo .menu {
@@ -62,12 +64,13 @@ nav .container_nav {
   height: fit-content;
   width: 50%;
 
-  display: none;
+  display: none; /* ------------Menu mobile---------- */
 }
 .menu ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  user-select: none
 }
 .menu ul li a {
   color: var(--primary);
@@ -87,6 +90,7 @@ nav .container_nav {
 }
 .icon-menu {
   line-height: 50%;
+  user-select: none
 }
 .iconNav .icon-adaptable {
   width: 35px;
@@ -199,6 +203,7 @@ nav .container_nav {
 .container-animation {
   overflow-x: hidden;
   background-color: var(--primary);
+  user-select: none;
 }
 
 .texto-barra {
@@ -386,6 +391,10 @@ main .container-nosotros figure picture img {
   color: var(--grayNormal);
 }
 
+.hidden{
+  display: none;
+}
+
 /* Contenedor Frase Tienda */
 
 .container___phrase {
@@ -425,14 +434,14 @@ footer {
   align-items: center;
   margin: 0 auto;
 }
-footer .subscription {
+footer .suscription {
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
 }
-footer .subscription h2 {
+footer .suscription h2 {
   color: var(--grayBold);
   font-family: archivo;
   font-size: 22px;
@@ -491,7 +500,7 @@ footer form .inbox input + .btn-sub {
 .lista_footer ul li a {
   color: var(--grayLight);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: archivo;
 }
 .lista_footer ul li:first-child a {
@@ -580,13 +589,18 @@ footer form .inbox input + .btn-sub {
 }
 .footer__text {
   text-align: center;
+  font-family: archivo;
 }
-.text--gradient {
-  background: linear-gradient(135deg, #323f2e 0%, #e65039 100%);
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  font-weight: 600;
+
+.text-design{
+  font-weight: 500;
+  color: var(--grayLight);
+  transition: color .3s ease-in-out;
+  font-size: 15px;
+  
+}
+.text-design:hover{
+  color: black;
 }
 
 .form--redirect a {
@@ -628,4 +642,107 @@ footer form .inbox input + .btn-sub {
   100% {
     opacity: 1;
   }
+}
+
+/* ----CARRITO---- */
+.cart {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  top: 5rem;
+  z-index: 2;
+  position: fixed;
+  user-select: none;
+  display: none; 
+  /* ---------CARRITO-------- */
+}
+.cart_products{
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cart .container_cart {
+  padding: 1vw;
+  padding-top: 2rem;
+}
+.cart .container_cart h2 {
+  color: var(--primary);
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.img-info-cart{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.cart_item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cart_item img {
+  border-radius: 9px;
+}
+
+.info_product_item{
+  display: flex;
+  flex-direction: column;
+}
+.info_product_item h3, .info_product_item h3 + span{
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.item-handler{
+  border: 1px solid black;
+  padding: 3px 1vw;
+  border-radius: 20px;
+}
+.item-quantity{
+  padding: 0 0;
+}
+.button-cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.button-cart .img-delete{
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.button-cart .img-delete:hover{
+  transform: scale(.9);
+}
+
+.button-total{
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+}
+.button-total:hover{
+  background-color: var(--primary);
+  color: white;
+}
+
+.down,.up{
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0 10px;
+  height: 2px;
+  border-radius: 10px;
+  transition: all .3s ease-in-out;
+}
+.down:hover,.up:hover{
+  background-color: var(--grayNormal)
 }
