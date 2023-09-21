@@ -1,153 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integrador Js</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/estrella.svg">
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/mediaqueries.css" />
+    <link rel="stylesheet" href="assets/animation.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integrador Js</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="stylesheet" href="assets/mediaqueries.css" />
-</head>
-
-<body>
-  <header>
-    <nav>
-      <section class="container_nav">
-        <div class="container_menuLogo">
-          <div class="logo">
-            <a href="/index.html"><img src="../assets/img/logo.png" alt="Logo de Tienda" draggable="false" /></a>
+  <body>
+    <header>
+      <nav>
+        <section class="container_nav">
+          <div class="container_menuLogo">
+            <div class="logo">
+              <a href="/index.html"
+                ><img
+                  src="../assets/img/logo.png"
+                  alt="Logo de Tienda"
+                  draggable="false"
+              /></a>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="#inicio" class="navbar-link">Inicio</a></li>
+                <li><a href="#nosotros" class="navbar-link">Nosotros</a></li>
+                <li><a href="#productos" class="navbar-link">Productos</a></li>
+                <li><a href="#contacto" class="navbar-link">Contacto</a></li>
+              </ul>
+              <p class="footer__text">
+                Hecho con ❤️ por
+                <a
+                  href="https://www.linkedin.com/in/ronald-santamar%C3%ADa-pizarro-9b538221a/"
+                  target="_blank"
+                  class="text-design navbar-link"
+                  >Ronald Santamaria</a
+                >
+              </p>
+            </div>
           </div>
-          <div class="menu">
-            <ul>
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#nosotros">Nosotros</a></li>
-              <li><a href="#productos">Productos</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-            </ul>
+          <div class="iconNav">
+            <div class="icon-menu">
+              <a href="pages/login.html" draggable="false">
+                <img
+                  src="assets/img/icon-perfil.svg"
+                  alt="Perfil de usuario"
+                  class="icon-adaptable"
+                  draggable="false"
+                />
+              </a>
+            </div>
+            <div class="icon-menu carrito-icono">
+              <img
+                src="assets/img/icon-cart.svg"
+                alt="Carrito de compra"
+                class="icon-adaptable"
+                draggable="false"
+              />
+              <span class="cart-bubble"></span>
+            </div>
+            <div class="icon-menu menu-icono">
+              <img
+                src="assets/img/icon-main.svg"
+                alt="Menu hamburguesa"
+                class="menuHamburguesa"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- CARRITO -->
+        <div class="cart">
+          <h2>TUS PRODUCTOS</h2>
+          <div class="container_cart">
+            <!--           
+  <div class="carrito-vacio">
+            <div class="cartIMG"><img src="assets/img/carritoVacio.svg" alt="Carrito sin productos"></div>
+            <p>Aún no tienes productos en tu carrito</p>
+          </div> -->
+          </div>
+
+          <div class="button-cart">
+            <img
+              src="assets/img/icon-delete.svg"
+              alt="Icono borrar todos los productos"
+              class="img-delete"
+            />
+            <button class="button-total">
+              <span>Ir a pagar</span>
+              <span class="priceTotal"></span>
+            </button>
+          </div>
+          
+        </div>
+      </nav>
+
+      <section class="cabecera" id="inicio">
+        <h1>FASHION</h1>
+        <div class="img-texto">
+          <img src="assets/img/imgFashion.png" alt="Imagen Fashion" />
+
+          <img
+            src="assets/img/code-barraLG.svg"
+            alt="Codigo de barra detalle"
+            class="code-barra"
+          />
+          <div class="texto-img">
+            <h2>+10k</h2>
+            <p>COLECCIONES</p>
           </div>
         </div>
-        <div class="iconNav">
-          <div class="icon-menu">
-            <a href="pages/login.html" draggable="false">
-              <img src="assets/img/icon-perfil.svg" alt="Perfil de usuario" class="icon-adaptable" draggable="false" />
-            </a>
-          </div>
-          <div class="icon-menu">
-            <img src="assets/img/icon-cart.svg" alt="Carrito de compra" class="icon-adaptable" draggable="false" />
-          </div>
-          <div class="icon-menu">
-            <img src="assets/img/icon-main.svg" alt="Menu hamburguesa" class="menuHamburguesa" />
-          </div>
+
+        <img
+          src="assets/img/headerLG.png"
+          alt="img portada"
+          class="img-portada"
+          draggable="false"
+        />
+      </section>
+      <img
+        src="assets/img/code-barraLG.svg"
+        alt="Codigo de barra detalle"
+        class="code-barraLG"
+      />
+    </header>
+
+    <div class="overlay"></div>
+    <div class="succes-modal">
+      <!-- <p>Agregado al carrito😎</p> -->
+    </div>
+
+    <main>
+      <section class="container-animation">
+        <div class="texto-barra">
+          <h2>STYLE FASHION</h2>
+          <img src="assets/img/estrella.svg" alt="Detalle de estrella" />
+          <h2>STYLE FASHION</h2>
+          <img src="assets/img/estrella.svg" alt="Detalle de estrella" />
+          <h2>STYLE FASHION</h2>
         </div>
       </section>
 
-      <!-- CARRITO -->
-      <div class="cart">
-        <div class="container_cart">
-          <h2>TUS PRODUCTOS</h2>
-          <div class="cart_products">
-            <div class="cart_item">
-              <div class="img-info-cart">
-                <img src="assets/img/producto-item.png" alt="imagen del producto" />
-                <div class="info_product_item">
-                  <h3>Basick Black</h3>
-                  <span>$299</span>
-                </div>
-              </div>
-              <div class="item-handler">
-                <span class="quantity-handler down" data-id="1">-</span>
-                <span class="item-quantity">1U</span>
-                <span class="quantity-handler up" data-id="1">+</span>
-              </div>
-            </div>
-            <div class="cart_item">
-              <div class="img-info-cart">
-                <img src="assets/img/producto-item.png" alt="imagen del producto" />
-                <div class="info_product_item">
-                  <h3>Basick Black</h3>
-                  <span>$299</span>
-                </div>
-              </div>
-              <div class="item-handler">
-                <span class="quantity-handler down" data-id="1">-</span>
-                <span class="item-quantity">1U</span>
-                <span class="quantity-handler up" data-id="1">+</span>
-              </div>
-            </div>
+      <section class="container-nosotros" id="nosotros">
+        <h3>NOSOTROS</h3>
+        <p>
+          Somos <span class="texto_resaltado">ronShop</span> una marca dedicada
+          a la moda contemporánea y a la expresión personal a través de la ropa.
+          Nuestra pasión por la moda se refleja en cada prenda que creamos,
+          fusionando estilo, comodidad y calidad.
+        </p>
+        <figure>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/img/aboutLG.jpg"
+              alt="Imagen Nosotros"
+            />
+            <img
+              src="assets/img/about.jpg"
+              alt="Imagen Nosotros"
+              draggable="false"
+            />
+          </picture>
+        </figure>
+      </section>
+
+      <section id="productos">
+        <div class="container___collection">
+          <div class="collection__title">
+            <h2>COLLECCIÓN</h2>
+            <h3>NUESTRA COLECCIÓN PARA TI</h3>
           </div>
-          <div class="button-cart">
-            <img src="assets/img/icon-delete.svg" alt="Icono borrar todos los productos" class="img-delete">
-            <button class="button-total">
-              <span>Ir a pagar</span>
-              <span>Subtotal: <b>$1750</b></p></span>
+          <div class="collection__categories">
+            <button class="category active">TODOS</button>
+            <button class="category" data-category="pantalones">
+              PANTALONES
             </button>
+            <button class="category" data-category="remeras">REMERAS</button>
+            <button class="category" data-category="buzos">BUZOS</button>
+            <button class="category" data-category="lentes">LENTES</button>
           </div>
-        </div>
-      </div>
-    </nav>
 
-    <section class="cabecera" id="inicio">
-      <h1>FASHION</h1>
-      <div class="img-texto">
-        <img src="assets/img/imgFashion.png" width="" height="" alt="" title="" />
-
-        <img src="assets/img/code-barraLG.svg" alt="Codigo de barra detalle" class="code-barra" />
-        <div class="texto-img">
-          <h2>+10k</h2>
-          <p>COLECCIONES</p>
-        </div>
-      </div>
-
-      <img src="assets/img/headerLG.png" alt="img portada" class="img-portada" draggable="false" />
-    </section>
-    <img src="assets/img/code-barraLG.svg" alt="Codigo de barra detalle" class="code-barraLG" />
-  </header>
-
-  <main>
-    <section class="container-animation">
-      <div class="texto-barra">
-        <h2>STYLE FASHION</h2>
-        <img src="assets/img/estrella.svg" alt="Detalle de estrella" />
-        <h2>STYLE FASHION</h2>
-        <img src="assets/img/estrella.svg" alt="Detalle de estrella" />
-        <h2>STYLE FASHION</h2>
-      </div>
-    </section>
-
-    <section class="container-nosotros" id="nosotros">
-      <h3>NOSOTROS</h3>
-      <p>
-        Somos <span class="texto_resaltado">ronShop</span> una marca dedicada
-        a la moda contemporánea y a la expresión personal a través de la ropa.
-        Nuestra pasión por la moda se refleja en cada prenda que creamos,
-        fusionando estilo, comodidad y calidad.
-      </p>
-      <figure>
-        <picture>
-          <source media="(min-width: 768px)" srcset="assets/img/aboutLG.jpg" alt="Imagen Nosotros" />
-          <img src="assets/img/about.jpg" alt="Imagen Nosotros" draggable="false" />
-        </picture>
-      </figure>
-    </section>
-
-    <section id="productos">
-      <div class="container___collection">
-        <div class="collection__title">
-          <h2>COLLECCIÓN</h2>
-          <h3>NUESTRA COLECCIÓN PARA TI</h3>
-        </div>
-        <div class="collection__categories">
-          <button class="category active">TODOS</button>
-          <button class="category" data-category="remeras">REMERAS</button>
-          <button class="category" data-category="pantalones">PANTALONES</button>
-          <button class="category" data-category="buzos">BUZOS</button>
-          <button class="category" data-category="lentes">LENTES</button>
-        </div>
-
-        <div class="container__products">
-
-          <!-- Producto 1 -->
-          <!--<div class="card_product">
+          <div class="container__products">
+            <!-- Producto 1 -->
+            <!--<div class="card_product">
               <img
                 src="assets/img/productos/remera-1.jpg"
                 alt="producto de la colección"
@@ -161,64 +199,65 @@
                 </div>
               </div>
             </div> -->
-
+          </div>
+          <button class="btn-more">VER MÁS</button>
         </div>
-        <button class="btn-more">VER MÁS</button>
+      </section>
+
+      <section class="container___phrase">
+        <h2>ESTILO QUE INSPIRA CONFIANZA</h2>
+        <p>
+          En <span class="texto_resaltado">ronShop</span>, nuestro compromiso es
+          ofrecerte estilo que no solo resalta tu belleza exterior, sino que
+          también fortalece tu confianza interior.
+        </p>
+        <img
+          src="assets/img/img-phrase.png"
+          alt="Imagen Frase"
+          draggable="false"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <section class="suscription">
+        <h2>SUSCRIBETE PARA NUEVOS LANZAMIENTOS</h2>
+
+        <form action="#">
+          <div class="inbox">
+            <input type="email" name="email" placeholder="TU CORREO" />
+            <a href="#" class="btn-sub">SUSCRIBETE</a>
+          </div>
+        </form>
+      </section>
+
+      <div class="lista_footer" id="contacto">
+        <ul>
+          <li><a>CATEGORIAS</a></li>
+          <li><a href="#productos">PANTALONES</a></li>
+          <li><a href="#productos">REMERAS</a></li>
+          <li><a href="#productos">BUZOS</a></li>
+          <li><a href="#productos">LENTES</a></li>
+        </ul>
+
+        <ul>
+          <li><a>GÉNERO</a></li>
+          <li><a href="#">HOMBRE</a></li>
+          <li><a href="#">MUJER</a></li>
+          <li><a href="#">UNISEX</a></li>
+        </ul>
+
+        <ul>
+          <li><a>TIENDA</a></li>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#productos">PRODUCTOS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
       </div>
-    </section>
+    </footer>
 
-    <section class="container___phrase">
-      <h2>ESTILO QUE INSPIRA CONFIANZA</h2>
-      <p>
-        En <span class="texto_resaltado">ronShop</span>, nuestro compromiso es
-        ofrecerte estilo que no solo resalta tu belleza exterior, sino que
-        también fortalece tu confianza interior.
-      </p>
-      <img src="assets/img/img-phrase.png" alt="Imagen Frase" draggable="false"/>
-    </section>
-  </main>
-
-  <footer>
-    <section class="suscription">
-      <h2>SUSCRIBETE PARA NUEVOS LANZAMIENTOS</h2>
-
-      <form action="#">
-        <div class="inbox">
-          <input type="email" name="email" placeholder="TU CORREO" />
-          <a href="#" class="btn-sub">SUSCRIBETE</a>
-        </div>
-      </form>
-    </section>
-
-    <div class="lista_footer" id="contacto">
-      <ul>
-        <li><a>CATEGORIAS</a></li>
-        <li><a href="#">REMERA</a></li>
-        <li><a href="#">PANTALÓN</a></li>
-        <li><a href="#">BUZOS</a></li>
-        <li><a href="#">SHORT</a></li>
-        <li><a href="#">LENTES</a></li>
-      </ul>
-
-      <ul>
-        <li><a>GÉNERO</a></li>
-        <li><a href="#">HOMBRE</a></li>
-        <li><a href="#">MUJER</a></li>
-        <li><a href="#">UNISEX</a></li>
-      </ul>
-
-      <ul>
-        <li><a>TIENDA</a></li>
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">NOSOTROS</a></li>
-        <li><a href="#">PRODUCTOS</a></li>
-        <li><a href="#">CONTACTO</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="assets/data.js"></script>
-  <script src="assets/script.js"></script>
-</body>
-
+    <script src="assets/data.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
 </html>

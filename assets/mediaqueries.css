@@ -4,13 +4,14 @@
   .cart {
     width: 25rem;
     right: 0;
+    border-radius: 30px 0 0;
   }
   .item-quantity {
-    padding: 0 10px;
+    padding: 0 0px;
   }
   .item-handler {
     border: 1px solid black;
-    padding: 3px 16px;
+    padding: 3px 8px;
     border-radius: 20px;
   }
 
@@ -23,6 +24,16 @@
   .logo a img {
     width: 12rem;
   }
+  /* MENU */
+  .menu .footer__text {
+    display: none;
+  }
+  .menu {
+    width: 20rem;
+    left: 0;
+    border-radius: 0 30px 0;
+  }
+
   @keyframes scrollHorizontal {
     0% {
       transform: translateX(63%);
@@ -36,10 +47,16 @@
     font-size: 44px;
     line-height: 47px;
   }
+  
   .collection__categories {
     margin: 3rem 1rem;
   }
 
+  .info_product_item h3,
+.info_product_item h3 + span {
+  width: 17vw;
+  overflow: hidden;
+}
   /* footer */
   footer {
     max-width: 540px;
@@ -59,11 +76,12 @@
 @media (min-width: 768px) {
   /* CARRITO */
   .cart {
-    min-width: 375px;
+    min-width: 30rem;
     right: 0;
-  }
+    padding: 0 0;
+}
   .cart .container_cart {
-    padding: 2rem 0;
+    padding: 0rem 0;
   }
   .texto-img h2 {
     font-size: 79px;
@@ -146,6 +164,8 @@
     position: initial;
     height: initial;
     width: 100%;
+
+    transform: initial;
   }
 
   .menu ul {
@@ -317,6 +337,11 @@
     background-color: var(--grayNormal);
   }
 
+  .info_product_item h3,
+  .info_product_item h3 + span {
+    width: 12vw;
+    overflow: hidden;
+  }
 }
 /* Para desktop LG */
 @media (min-width: 1200px) {
@@ -337,6 +362,12 @@
   }
   .container-image img {
     width: 35vw;
+  }
+  
+  .info_product_item h3,
+  .info_product_item h3 + span {
+    width: 150px;
+    overflow: hidden;
   }
 }
 
@@ -388,5 +419,11 @@
   .container___phrase,
   footer {
     max-width: 1320px;
+  }
+
+  /* Modal */
+  .succes-modal {
+    right: 13%!important;
+    top: 6rem!important;
   }
 }
