@@ -36,7 +36,7 @@ const plantillaProducto = (producto) => {
     <img
       src="${productImg}"
       alt="Producto ${title}"
-      width="360" draggable="false"
+      width="360" height="100%" draggable="false"
     />
     <div class="info_product">
       <h3>${title}</h3>
@@ -416,10 +416,7 @@ const loadUser = () => {
     const imgElement = document.querySelector(".usuario-icono a img");
     imgElement.setAttribute("src", "assets/img/icon-exit.svg");
   }
-
 }
-
-
 
 // const userIconExit = document.querySelector(".usuario-icono");
 const exitUser = () => {

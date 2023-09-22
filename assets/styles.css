@@ -338,6 +338,7 @@ main .container-nosotros figure picture img {
 .card_product img {
   border-radius: 20px;
   width: 100%;
+  height: fit-content;
 }
 .card_product .info_product {
   color: var(--grayNormal);
