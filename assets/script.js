@@ -425,10 +425,11 @@ const loadUser = () => {
 const exitUser = () => {
   if (isUserExisting()) {
     const linkElement = document.querySelector(".usuario-icono a");
-    linkElement.href = "index.html";
+    linkElement.removeAttribute("href");
     if (confirm("¿Desea salir de su cuenta?")) {
       sessionStorage.removeItem("activeUser");
       alert("Ha cerrado su cuenta correctamente");
+      window.location.href = "index.html"
     }
   }
 }
