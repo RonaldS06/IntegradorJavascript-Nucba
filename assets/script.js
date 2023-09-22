@@ -412,7 +412,11 @@ const loadUser = () => {
   if (activeUser && activeUser.name) {
     userBubble.style.display = "flex"; // Muestra el contenedor de usuario logueado
     nombreBubble.textContent = `Hola ${activeUser.name}`;
+
+    const imgElement = document.querySelector(".usuario-icono a img");
+    imgElement.setAttribute("src", "assets/img/icon-exit.svg");
   }
+
 }
 
 
@@ -422,7 +426,7 @@ const exitUser = () => {
   if (isUserExisting()) {
     const linkElement = document.querySelector(".usuario-icono a");
     linkElement.href = "index.html";
-    if(confirm("¿Desea salir de su cuenta?")){
+    if (confirm("¿Desea salir de su cuenta?")) {
       sessionStorage.removeItem("activeUser");
       alert("Ha cerrado su cuenta correctamente");
     }
