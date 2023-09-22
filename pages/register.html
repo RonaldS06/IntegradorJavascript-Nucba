@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registrarse | ronShop</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/estrella.svg"/>
+    <link rel="icon" type="image/x-icon" href="../assets/img/estrella.svg" />
     <link rel="stylesheet" href="../assets/styles.css" />
     <link rel="stylesheet" href="../assets/mediaqueries.css" />
     <link rel="stylesheet" href="../assets/animation.css" />
@@ -17,11 +17,13 @@
           <div class="container-login">
             <div class="logo-info">
               <a href="/index.html"
-                ><img src="../assets/img/logo.png" alt="Logo de Tienda"
+                ><img src="../assets/img/logo.webp" alt="Logo de Tienda"
               /></a>
               <h2>Crea tu cuenta</h2>
             </div>
+            <!-- Formulario -->
             <form class="form__container" id="register-form" novalidate>
+              
               <!-- Nombre -->
               <div class="form__field">
                 <label for="nombre">Nombre</label>
@@ -33,7 +35,7 @@
                   autocomplete="off"
                   name="nombre"
                 />
-                <small></small>
+                <small><!-- msg --></small>
               </div>
               <!-- Nombre -->
               <!-- Apellido -->
@@ -128,5 +130,7 @@
         </section>
       </div>
     </main>
+
+    <script src="../assets/register.js"></script>
   </body>
 </html>

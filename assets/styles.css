@@ -265,7 +265,7 @@ main .container-nosotros figure picture img {
 .container___collection {
   background-color: var(--primary);
   border-radius: 2.1875rem;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 4.5rem;
 }
 .container___collection > .collection__title {
   display: flex;
@@ -350,7 +350,13 @@ main .container-nosotros figure picture img {
   border: none;
   color: var(--background);
   font-size: 17px;
+  transition: all .2s ease-in-out;
 }
+
+.card_product .info_product > .precio-btnAdd .btn-add:active{
+  background-color: black;
+}
+
 .precio-btnAdd {
   display: flex;
   justify-content: space-between;
@@ -502,12 +508,13 @@ footer form .inbox input + .btn-sub {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  max-width: 18rem;
 }
 .form__container .form__field input {
   font-family: archivo;
   border: none;
   border-bottom: 1.5px solid var(--grayNormal);
-  padding: 5px 0;
+  padding: 5px 0 5px 5px;
 }
 .form__container input::placeholder {
   color: var(--grayNormal);
@@ -596,6 +603,7 @@ footer form .inbox input + .btn-sub {
   align-items: center;
   height: 100vh;
   background-color: #fff;
+  padding: 0 2rem;
 }
 
 .container-image {
@@ -723,13 +731,6 @@ footer form .inbox input + .btn-sub {
   text-overflow: ellipsis;
 }
 
-/* .hero-card-top h3 {
-  font-weight: 600;
-  font-size: 16px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
 
 .item-handler {
   border: 1px solid black;
@@ -797,5 +798,42 @@ img.fit-content {
 }
 
 .hidden {
+  display: none;
+}
+
+.usuarioLogueado{
+  position: fixed;
+  bottom: 3vh;
+  right: 4vw;
+  background-color: var(--secondary);
+  padding: .5rem .7rem;
+  border-radius: 30px;
+  font-size: 20px;
+  display: none;
+  /* display: flex; */
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  animation: scaleObjeto 5s infinite;
+  z-index: 999;
+}
+
+.usuarioLogueado:hover{
+  animation: initial;
+  padding: .5rem 1rem;
+}
+
+.nombreBubble{
+  display: none;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  
+}
+
+.usuarioLogueado:hover .nombreBubble{
+  display: block;
+}
+
+
+.cart::-webkit-scrollbar {
   display: none;
 }

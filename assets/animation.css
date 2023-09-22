@@ -49,6 +49,18 @@
     transform: translateX(-100%);
   }
 }
+@keyframes scaleObjeto {
+  0% {
+    transform: rotate(0deg)
+    
+  }
+  50% {
+    transform: rotate(360deg)
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 @keyframes containerForm {
   0% {
@@ -100,4 +112,33 @@
 }
 .showModal{
   display: block;
+}
+
+/* Form Error */
+
+.form__field.errorForm input{
+  border-bottom: 1.5px solid red;
+}
+
+.form__field small{
+  color: red;
+  max-width: fit-content;
+  text-align: center;
+  font-size: 13px;
+  font-family: archivo;
+
+  display: none;
+}
+
+/* Form Succes */
+.form__field.succesForm input{
+  border-bottom: 1.5px solid green;
+}
+
+#form__error{
+  color: error;
+  font-size: 1rem;
+  margin: 8px 0;
+  max-width: 350px;
+  text-align: center;
 }

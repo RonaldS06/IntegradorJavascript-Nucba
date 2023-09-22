@@ -21,8 +21,12 @@ const successModal = document.querySelector(".succes-modal")
 const buyBtn = document.querySelector(".button-total");
 const deleteBtn = document.querySelector(".img-delete");
 //Bubble
-const cartBubble = document.querySelector(".cart-bubble")
+const cartBubble = document.querySelector(".cart-bubble");
+const userBubble = document.querySelector(".usuarioLogueado");
+const nombreBubble = document.querySelector(".nombreBubble");
 
+//Usuario Icono
+const userIconExit = document.querySelector(".usuario-icono");
 
 /* Plantilla de producto */
 const plantillaProducto = (producto) => {
@@ -387,9 +391,43 @@ const completarCartAction = (confirmarMsg, succesMsg) => {
   }
 }
 
-// Compra exitosa Msj
+// Realizar compra + usuario logueado
 const completarCompra = () => {
+
+  if (!isUserExisting()) {
+    alert("Necesitas Iniciar Sesión o Registrarte para poder realizar la compra 💪")
+    window.location.href = "/pages/login.html";
+    return;
+  }
   completarCartAction("¿Desea completar su compra?", "Gracias por su compra😁")
+}
+const isUserExisting = () => {
+  const activeUser = sessionStorage.getItem("activeUser");
+  return !!activeUser;
+}
+
+// const userBubble = document.querySelector(".usuarioLogueado");
+const loadUser = () => {
+  const activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+
+  if (activeUser && activeUser.name) {
+    userBubble.style.display = "flex"; // Muestra el contenedor de usuario logueado
+    nombreBubble.textContent = `Hola ${activeUser.name}`;
+  }
+}
+
+
+
+// const userIconExit = document.querySelector(".usuario-icono");
+const exitUser = () => {
+  if (isUserExisting()) {
+    const linkElement = document.querySelector(".usuario-icono a");
+    linkElement.href = "index.html";
+    if(confirm("¿Desea salir de su cuenta?")){
+      sessionStorage.removeItem("activeUser");
+      alert("Ha cerrado su cuenta correctamente");
+    }
+  }
 }
 
 //Carrito vaciado msj
@@ -412,6 +450,7 @@ const init = () => {
   //Carrito
   document.addEventListener("DOMContentLoaded", cartRender);
   document.addEventListener("DOMContentLoaded", cartPriceTotal);
+  document.addEventListener("DOMContentLoaded", loadUser)
   //Add productos
   contenedorProductos.addEventListener("click", addProduct);
 
@@ -419,6 +458,7 @@ const init = () => {
   cartProducts.addEventListener("click", manejarCantidad);
   buyBtn.addEventListener("click", completarCompra);
   deleteBtn.addEventListener("click", eliminarCarrito);
+  userIconExit.addEventListener("click", exitUser)
 
   //misma fnc para ambos botones
   disabledBtn(buyBtn);

@@ -189,6 +189,10 @@
     transform: scale(0.9);
   }
 
+  .iconNav .icon-adaptable:active {
+    filter: initial;
+  }
+
   /* HEADER */
   .cabecera {
     padding: 4rem 0 16rem;
@@ -342,6 +346,14 @@
     width: 12vw;
     overflow: hidden;
   }
+
+  
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 100%;
+}
 }
 /* Para desktop LG */
 @media (min-width: 1200px) {
