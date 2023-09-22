@@ -250,7 +250,6 @@ const addProduct = (e) => {
   }
 
   const producto = crearProductoData(e.target.dataset);
-  console.log(producto)
 
   if (ExisteProductoEnCarrito(producto)) {
     addUnitToProduct(producto);
